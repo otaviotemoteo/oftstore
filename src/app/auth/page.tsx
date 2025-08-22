@@ -1,3 +1,4 @@
+import { Header } from "@/components/commom/header";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import SignInForm from "./components/sign-in-form";
@@ -6,9 +7,11 @@ import SignUpForm from "./components/sign-up-form";
 const Authentication = async () => {
   return (
     <>
-      <div className="flex w-full flex-col gap-6 p-5">
+      <Header />
+
+      <div className="mx-auto flex w-full max-w-md flex-col gap-6 p-5">
         <Tabs defaultValue="sign-in">
-          <TabsList>
+          <TabsList className="mx-auto">
             <TabsTrigger value="sign-in">Entrar</TabsTrigger>
             <TabsTrigger value="sign-up">Criar conta</TabsTrigger>
           </TabsList>
